@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Github, Linkedin, Twitter, Mail, ArrowUp } from 'lucide-react';
+import { Github, Mail, ArrowUp, Laptop, StackoverflowIcon, BookOpen } from 'lucide-react';
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -22,8 +22,8 @@ const Footer = () => {
           
           <div className="w-full flex flex-col md:flex-row justify-between items-center">
             <div className="mb-6 md:mb-0">
-              <span className="text-2xl font-bold bg-clip-text text-transparent bg-tech-gradient animate-gradient-shift">
-                <span className="text-3xl">SV</span><span className="ml-1 text-xl">Dev</span>
+              <span className="text-2xl font-bold font-heading bg-clip-text text-transparent bg-tech-gradient animate-gradient-shift">
+                Shivraj Vala
               </span>
               <p className="text-foreground/60 mt-2 text-sm text-center md:text-left">
                 Building exceptional mobile experiences.
@@ -41,22 +41,22 @@ const Footer = () => {
                 <Github size={20} />
               </a>
               <a 
-                href="https://linkedin.com" 
+                href="https://stackoverflow.com" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="social-icon"
-                aria-label="LinkedIn Profile"
+                aria-label="Stack Overflow Profile"
               >
-                <Linkedin size={20} />
+                <StackoverflowIcon size={20} />
               </a>
               <a 
-                href="https://twitter.com" 
+                href="https://medium.com" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="social-icon"
-                aria-label="Twitter Profile"
+                aria-label="Medium Profile"
               >
-                <Twitter size={20} />
+                <BookOpen size={20} />
               </a>
               <a 
                 href="mailto:contact@shivrajvala.com" 

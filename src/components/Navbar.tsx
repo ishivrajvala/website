@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { Github, Linkedin, Twitter, Menu, X, BookOpen } from 'lucide-react';
+import { BookOpen, Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const Navbar = () => {
@@ -33,32 +33,27 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <span className="text-2xl font-bold bg-clip-text text-transparent bg-tech-gradient animate-gradient-shift">
-              <span className="text-3xl">SV</span><span className="ml-1 text-xl">Dev</span>
+            <span className="text-2xl font-bold bg-clip-text text-transparent bg-tech-gradient animate-gradient-shift font-heading">
+              Shivraj Vala
             </span>
           </div>
           
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            <button onClick={() => handleNavigation('home')} className="nav-link active">Home</button>
-            <button onClick={() => handleNavigation('about')} className="nav-link">About</button>
-            <button onClick={() => handleNavigation('projects')} className="nav-link">Projects</button>
-            <button onClick={() => handleNavigation('blogs')} className="nav-link flex items-center">
-              <BookOpen size={16} className="mr-1" />
-              Blogs
-            </button>
-            <button onClick={() => handleNavigation('contact')} className="nav-link">Contact</button>
-            
-            <div className="ml-4 flex items-center space-x-4">
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="social-icon">
-                <Github size={20} />
-              </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-icon">
-                <Linkedin size={20} />
-              </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="social-icon">
-                <Twitter size={20} />
-              </a>
+          {/* Desktop Navigation - more compact */}
+          <nav className="hidden md:flex items-center">
+            <div className="flex space-x-6">
+              <button onClick={() => handleNavigation('home')} className="nav-link active">Home</button>
+              <button onClick={() => handleNavigation('about')} className="nav-link">About</button>
+              <button onClick={() => handleNavigation('projects')} className="nav-link">Projects</button>
+              <button onClick={() => handleNavigation('blogs')} className="nav-link flex items-center">
+                <BookOpen size={16} className="mr-1" />
+                Articles
+              </button>
+              <button 
+                onClick={() => handleNavigation('contact')} 
+                className="ml-2 px-4 py-2 bg-tech-blue rounded-lg text-white hover:bg-tech-blue/90 transition-all"
+              >
+                Contact Me
+              </button>
             </div>
           </nav>
           
@@ -84,21 +79,14 @@ const Navbar = () => {
         <button onClick={() => handleNavigation('projects')} className="text-2xl font-medium hover:text-tech-blue transition-colors">Projects</button>
         <button onClick={() => handleNavigation('blogs')} className="text-2xl font-medium hover:text-tech-blue transition-colors flex items-center">
           <BookOpen size={20} className="mr-2" />
-          Blogs
+          Articles
         </button>
-        <button onClick={() => handleNavigation('contact')} className="text-2xl font-medium hover:text-tech-blue transition-colors">Contact</button>
-        
-        <div className="flex items-center space-x-6 mt-8">
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="social-icon">
-            <Github size={24} />
-          </a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-icon">
-            <Linkedin size={24} />
-          </a>
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="social-icon">
-            <Twitter size={24} />
-          </a>
-        </div>
+        <button 
+          onClick={() => handleNavigation('contact')} 
+          className="mt-4 px-6 py-2 bg-tech-blue rounded-lg text-white hover:bg-tech-blue/90 transition-all"
+        >
+          Contact Me
+        </button>
       </div>
     </header>
   );

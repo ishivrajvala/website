@@ -20,7 +20,7 @@ const projects = [
     title: 'AI Fitness Coach',
     description: 'A mobile fitness application with real-time pose estimation and AI-powered workout recommendations.',
     image: 'placeholder.svg',
-    tags: ['Kotlin', 'TensorFlow', 'Jetpack Compose', 'ML Kit'],
+    tags: ['Android', 'TensorFlow', 'Jetpack Compose', 'ML Kit'],
     links: {
       github: 'https://github.com',
       demo: 'https://example.com',
@@ -42,7 +42,7 @@ const projects = [
     title: 'Smart Home Controller',
     description: 'An IoT mobile application for controlling and monitoring smart home devices with voice commands and automations.',
     image: 'placeholder.svg',
-    tags: ['Kotlin', 'IoT', 'MQTT', 'Voice Recognition'],
+    tags: ['Android', 'IoT', 'MQTT', 'Voice Recognition'],
     links: {
       github: 'https://github.com',
       demo: 'https://example.com',
@@ -50,10 +50,10 @@ const projects = [
   },
   {
     id: 5,
-    title: 'Social Media Analytics',
-    description: 'A data visualization app for social media marketers with real-time analytics and content performance tracking.',
+    title: 'Experimental AR Navigation',
+    description: 'An experimental AR navigation system that guides users through complex indoor environments.',
     image: 'placeholder.svg',
-    tags: ['Flutter', 'REST API', 'Firebase', 'Analytics'],
+    tags: ['Flutter', 'ARCore', 'Experiments', 'Navigation'],
     links: {
       github: 'https://github.com',
       demo: 'https://example.com',
@@ -61,10 +61,10 @@ const projects = [
   },
   {
     id: 6,
-    title: 'Travel Companion',
-    description: 'A travel planning app with AR navigation, translation, and local recommendations powered by machine learning.',
+    title: 'Voice Controlled Game',
+    description: 'An experimental game that can be played entirely through voice commands.',
     image: 'placeholder.svg',
-    tags: ['Kotlin', 'AR', 'Machine Learning', 'Maps API'],
+    tags: ['Android', 'Experiments', 'Voice AI', 'Game'],
     links: {
       github: 'https://github.com',
       demo: 'https://example.com',
@@ -72,8 +72,8 @@ const projects = [
   },
 ];
 
-// Filter categories based on project tags
-const filters = ['All', 'Flutter', 'Kotlin', 'AR', 'AI', 'Firebase'];
+// Updated filter categories
+const filters = ['All', 'Flutter', 'Android', 'Experiments'];
 
 const ProjectsSection = () => {
   const [activeFilter, setActiveFilter] = useState('All');
