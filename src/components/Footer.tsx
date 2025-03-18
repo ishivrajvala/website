@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Github, Mail, ArrowUp, Laptop, StackoverflowIcon, BookOpen } from 'lucide-react';
+import { Github, Mail, ArrowUp, Laptop, BookOpen } from 'lucide-react';
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -47,7 +47,7 @@ const Footer = () => {
                 className="social-icon"
                 aria-label="Stack Overflow Profile"
               >
-                <StackoverflowIcon size={20} />
+                <BookOpen size={20} />
               </a>
               <a 
                 href="https://medium.com" 
