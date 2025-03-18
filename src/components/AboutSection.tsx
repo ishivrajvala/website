@@ -78,21 +78,8 @@ const AboutSection = () => {
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-          {/* Bio & Experience */}
+          {/* Experience Section */}
           <div className="space-y-8 opacity-0 animate-slide-up animate-delay-200">
-            <div>
-              <h3 className="text-2xl font-semibold mb-4">My Journey</h3>
-              <p className="text-foreground/80 mb-4">
-                With over a decade of experience in mobile development, I've had the opportunity to work on diverse projects 
-                ranging from consumer apps to enterprise solutions. My expertise spans across Flutter, Kotlin, Swift, 
-                and emerging technologies like AR and AI.
-              </p>
-              <p className="text-foreground/80">
-                I'm passionate about creating seamless user experiences and pushing the boundaries of what's possible on 
-                mobile platforms. My approach combines technical expertise with a deep understanding of user needs.
-              </p>
-            </div>
-            
             <div>
               <h3 className="text-2xl font-semibold mb-4">Experience</h3>
               <div className="space-y-6">

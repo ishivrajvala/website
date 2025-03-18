@@ -105,11 +105,18 @@ const HeroSection = () => {
           
           <div className="lg:w-2/5 mt-12 lg:mt-0 opacity-0 animate-slide-up animate-delay-300">
             <div className="relative w-64 h-64 md:w-80 md:h-80 mx-auto">
-              {/* Profile Image with stylized frame */}
+              {/* Tech Illustrator instead of SV text */}
               <div className="relative z-10 w-full h-full rounded-full overflow-hidden border-2 border-tech-blue/30 blue-glow animate-pulse-slow">
                 <div className="absolute inset-0 bg-gradient-radial from-tech-blue/20 to-transparent"></div>
                 <div className="w-full h-full rounded-full bg-tech-gray flex items-center justify-center overflow-hidden">
-                  <span className="text-7xl text-tech-blue font-bold">SV</span>
+                  <svg viewBox="0 0 200 200" className="w-3/4 h-3/4 text-tech-blue">
+                    <path fill="currentColor" d="M80,30 L120,30 L140,70 L160,70 L160,130 L140,130 L120,170 L80,170 L60,130 L40,130 L40,70 L60,70 L80,30 Z" />
+                    <circle cx="100" cy="100" r="20" fill="hsl(var(--card))" />
+                    <path fill="currentColor" d="M95,85 L115,85 L115,115 L95,115 Z" />
+                    <circle cx="90" cy="95" r="5" fill="currentColor" />
+                    <circle cx="110" cy="95" r="5" fill="currentColor" />
+                    <path fill="none" stroke="currentColor" strokeWidth="2" d="M90,110 C90,115 110,115 110,110" />
+                  </svg>
                 </div>
               </div>
               
