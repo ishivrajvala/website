@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { Github, Linkedin, Twitter, Menu, X } from 'lucide-react';
+import { Github, Linkedin, Twitter, Menu, X, BookOpen } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const Navbar = () => {
@@ -33,7 +33,9 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <span className="text-2xl font-bold tech-gradient-text">Shivraj Vala</span>
+            <span className="text-2xl font-bold bg-clip-text text-transparent bg-tech-gradient animate-gradient-shift">
+              <span className="text-3xl">SV</span><span className="ml-1 text-xl">Dev</span>
+            </span>
           </div>
           
           {/* Desktop Navigation */}
@@ -41,6 +43,10 @@ const Navbar = () => {
             <button onClick={() => handleNavigation('home')} className="nav-link active">Home</button>
             <button onClick={() => handleNavigation('about')} className="nav-link">About</button>
             <button onClick={() => handleNavigation('projects')} className="nav-link">Projects</button>
+            <button onClick={() => handleNavigation('blogs')} className="nav-link flex items-center">
+              <BookOpen size={16} className="mr-1" />
+              Blogs
+            </button>
             <button onClick={() => handleNavigation('contact')} className="nav-link">Contact</button>
             
             <div className="ml-4 flex items-center space-x-4">
@@ -76,6 +82,10 @@ const Navbar = () => {
         <button onClick={() => handleNavigation('home')} className="text-2xl font-medium hover:text-tech-blue transition-colors">Home</button>
         <button onClick={() => handleNavigation('about')} className="text-2xl font-medium hover:text-tech-blue transition-colors">About</button>
         <button onClick={() => handleNavigation('projects')} className="text-2xl font-medium hover:text-tech-blue transition-colors">Projects</button>
+        <button onClick={() => handleNavigation('blogs')} className="text-2xl font-medium hover:text-tech-blue transition-colors flex items-center">
+          <BookOpen size={20} className="mr-2" />
+          Blogs
+        </button>
         <button onClick={() => handleNavigation('contact')} className="text-2xl font-medium hover:text-tech-blue transition-colors">Contact</button>
         
         <div className="flex items-center space-x-6 mt-8">

@@ -54,16 +54,6 @@ const SkillItem = ({ name, level }: SkillItemProps) => (
   </div>
 );
 
-const ServiceCard = ({ icon: Icon, title, description }: { icon: React.ElementType, title: string, description: string }) => (
-  <div className="glass-card rounded-xl p-6 transition-all duration-300 hover:border-tech-blue/30 hover:blue-glow group">
-    <div className="w-12 h-12 rounded-lg bg-tech-blue/10 flex items-center justify-center mb-4 group-hover:bg-tech-blue/20 transition-all">
-      <Icon className="text-tech-blue" size={24} />
-    </div>
-    <h3 className="text-xl font-semibold mb-2">{title}</h3>
-    <p className="text-foreground/70">{description}</p>
-  </div>
-);
-
 const AboutSection = () => {
   return (
     <section id="about" className="py-24 bg-gradient-to-b from-tech-darker to-tech-dark">
@@ -77,9 +67,46 @@ const AboutSection = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-          {/* Experience Section */}
-          <div className="space-y-8 opacity-0 animate-slide-up animate-delay-200">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
+          {/* Tech Illustrator */}
+          <div className="lg:col-span-5 flex items-center justify-center opacity-0 animate-slide-up animate-delay-200">
+            <div className="relative w-64 h-64 md:w-80 md:h-80">
+              {/* Tech Illustrator */}
+              <div className="relative z-10 w-full h-full rounded-full overflow-hidden border-2 border-tech-blue/30 blue-glow animate-pulse-slow">
+                <div className="absolute inset-0 bg-gradient-radial from-tech-blue/20 to-transparent"></div>
+                <div className="w-full h-full rounded-full bg-tech-gray flex items-center justify-center overflow-hidden">
+                  <svg viewBox="0 0 200 200" className="w-3/4 h-3/4 text-tech-blue">
+                    <path fill="currentColor" d="M80,30 L120,30 L140,70 L160,70 L160,130 L140,130 L120,170 L80,170 L60,130 L40,130 L40,70 L60,70 L80,30 Z" />
+                    <circle cx="100" cy="100" r="20" fill="hsl(var(--card))" />
+                    <path fill="currentColor" d="M95,85 L115,85 L115,115 L95,115 Z" />
+                    <circle cx="90" cy="95" r="5" fill="currentColor" />
+                    <circle cx="110" cy="95" r="5" fill="currentColor" />
+                    <path fill="none" stroke="currentColor" strokeWidth="2" d="M90,110 C90,115 110,115 110,110" />
+                  </svg>
+                </div>
+              </div>
+              
+              {/* Background glow effect */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-56 h-56 md:w-72 md:h-72 rounded-full bg-tech-blue/5 blur-xl"></div>
+              
+              {/* Orbiting tech icons */}
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/4 glass-card px-3 py-1 rounded-full animate-float">
+                <span className="text-tech-blue font-medium">Flutter</span>
+              </div>
+              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/4 glass-card px-3 py-1 rounded-full animate-float" style={{ animationDelay: '1s' }}>
+                <span className="text-tech-purple font-medium">Kotlin</span>
+              </div>
+              <div className="absolute left-0 top-1/2 -translate-x-3/4 -translate-y-1/2 glass-card px-3 py-1 rounded-full animate-float" style={{ animationDelay: '2s' }}>
+                <span className="text-tech-pink font-medium">AR</span>
+              </div>
+              <div className="absolute right-0 top-1/2 translate-x-3/4 -translate-y-1/2 glass-card px-3 py-1 rounded-full animate-float" style={{ animationDelay: '3s' }}>
+                <span className="text-tech-blue font-medium">AI</span>
+              </div>
+            </div>
+          </div>
+          
+          {/* Experience & Skills */}
+          <div className="lg:col-span-7 space-y-8 opacity-0 animate-slide-up animate-delay-300">
             <div>
               <h3 className="text-2xl font-semibold mb-4">Experience</h3>
               <div className="space-y-6">
@@ -96,42 +123,13 @@ const AboutSection = () => {
                 ))}
               </div>
             </div>
-          </div>
-          
-          {/* Skills & Services */}
-          <div className="space-y-8 opacity-0 animate-slide-up animate-delay-300">
+            
             <div>
               <h3 className="text-2xl font-semibold mb-4">Technical Skills</h3>
               <div className="space-y-1">
                 {skills.map((skill, index) => (
                   <SkillItem key={index} name={skill.name} level={skill.level} />
                 ))}
-              </div>
-            </div>
-            
-            <div>
-              <h3 className="text-2xl font-semibold mb-6">What I Do</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <ServiceCard
-                  icon={Smartphone}
-                  title="Mobile Development"
-                  description="Cross-platform and native app development with Flutter and Kotlin."
-                />
-                <ServiceCard
-                  icon={Layers}
-                  title="UI/UX Design"
-                  description="Creating intuitive and beautiful user interfaces with a focus on user experience."
-                />
-                <ServiceCard
-                  icon={Database}
-                  title="System Architecture"
-                  description="Designing scalable and maintainable application architectures."
-                />
-                <ServiceCard
-                  icon={Globe}
-                  title="AR & AI Integration"
-                  description="Implementing augmented reality and artificial intelligence features."
-                />
               </div>
             </div>
           </div>

@@ -22,7 +22,9 @@ const Footer = () => {
           
           <div className="w-full flex flex-col md:flex-row justify-between items-center">
             <div className="mb-6 md:mb-0">
-              <span className="text-2xl font-bold tech-gradient-text">Shivraj Vala</span>
+              <span className="text-2xl font-bold bg-clip-text text-transparent bg-tech-gradient animate-gradient-shift">
+                <span className="text-3xl">SV</span><span className="ml-1 text-xl">Dev</span>
+              </span>
               <p className="text-foreground/60 mt-2 text-sm text-center md:text-left">
                 Building exceptional mobile experiences.
               </p>
@@ -69,15 +71,12 @@ const Footer = () => {
           <div className="w-full h-px bg-tech-gray/20 my-8"></div>
           
           <div className="w-full flex flex-col md:flex-row justify-between items-center">
-            <nav className="flex flex-wrap justify-center md:justify-start gap-6 text-sm text-foreground/60 mb-4 md:mb-0">
-              <button onClick={() => document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' })} className="hover:text-tech-blue transition-colors">Home</button>
-              <button onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })} className="hover:text-tech-blue transition-colors">About</button>
-              <button onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })} className="hover:text-tech-blue transition-colors">Projects</button>
-              <button onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} className="hover:text-tech-blue transition-colors">Contact</button>
-            </nav>
+            <p className="text-foreground/60 text-sm mb-4 md:mb-0">
+              &copy; {new Date().getFullYear()} Shivraj Vala. All rights reserved.
+            </p>
             
             <p className="text-foreground/60 text-sm">
-              &copy; {new Date().getFullYear()} Shivraj Vala. All rights reserved.
+              Made with <span className="text-tech-blue">❤</span> and modern tech
             </p>
           </div>
         </div>

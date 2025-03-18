@@ -54,8 +54,8 @@ const HeroSection = () => {
       <div ref={particlesRef} className="particles"></div>
       
       <div className="section-container relative z-10">
-        <div className="flex flex-col lg:flex-row items-center">
-          <div className="lg:w-3/5 lg:pr-12">
+        <div className="flex flex-col-reverse lg:flex-row items-center">
+          <div className="lg:w-3/5 lg:pr-12 mt-12 lg:mt-0">
             <div className="space-y-6 text-center lg:text-left max-w-3xl mx-auto lg:mx-0">
               <p className="inline-block px-3 py-1 rounded-full bg-tech-blue/10 border border-tech-blue/20 text-tech-blue text-sm font-medium backdrop-blur-sm opacity-0 animate-fade-in">
                 Mobile Development Expert
@@ -103,9 +103,9 @@ const HeroSection = () => {
             </div>
           </div>
           
-          <div className="lg:w-2/5 mt-12 lg:mt-0 opacity-0 animate-slide-up animate-delay-300">
+          <div className="lg:w-2/5 opacity-0 animate-slide-up animate-delay-300">
             <div className="relative w-64 h-64 md:w-80 md:h-80 mx-auto">
-              {/* Tech Illustrator instead of SV text */}
+              {/* Tech Illustrator */}
               <div className="relative z-10 w-full h-full rounded-full overflow-hidden border-2 border-tech-blue/30 blue-glow animate-pulse-slow">
                 <div className="absolute inset-0 bg-gradient-radial from-tech-blue/20 to-transparent"></div>
                 <div className="w-full h-full rounded-full bg-tech-gray flex items-center justify-center overflow-hidden">
