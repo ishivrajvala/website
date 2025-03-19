@@ -67,9 +67,8 @@ const AboutSection = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
-          {/* Experience & Skills */}
-          <div className="lg:col-span-7 space-y-8 opacity-0 animate-slide-up animate-delay-200">
+        <div className="mx-auto max-w-4xl opacity-0 animate-slide-up animate-delay-200">
+          <div className="space-y-8">
             <div>
               <h3 className="text-2xl font-semibold mb-4">Experience</h3>
               <div className="space-y-6">
@@ -93,50 +92,6 @@ const AboutSection = () => {
                 {skills.map((skill, index) => (
                   <SkillItem key={index} name={skill.name} level={skill.level} />
                 ))}
-              </div>
-            </div>
-          </div>
-          
-          {/* Developer Illustrator */}
-          <div className="lg:col-span-5 flex items-center justify-center opacity-0 animate-slide-up animate-delay-300">
-            <div className="relative w-64 h-64 md:w-80 md:h-80">
-              {/* Dev Illustrator */}
-              <div className="relative z-10 w-full h-full rounded-full overflow-hidden border-2 border-tech-blue/30 blue-glow animate-pulse-slow">
-                <div className="absolute inset-0 bg-gradient-radial from-tech-blue/20 to-transparent"></div>
-                <div className="w-full h-full rounded-full bg-tech-gray flex items-center justify-center overflow-hidden">
-                  <svg viewBox="0 0 200 200" className="w-3/4 h-3/4 text-tech-blue">
-                    {/* Developer character */}
-                    <rect x="70" y="50" width="60" height="60" fill="currentColor" rx="5" />
-                    <rect x="80" y="60" width="40" height="30" fill="hsl(var(--card))" rx="2" />
-                    <rect x="85" y="65" width="30" height="5" fill="currentColor" opacity="0.7" />
-                    <rect x="85" y="75" width="20" height="5" fill="currentColor" opacity="0.7" />
-                    <rect x="85" y="85" width="25" height="5" fill="currentColor" opacity="0.7" />
-                    <circle cx="100" cy="130" r="20" fill="currentColor" />
-                    <rect x="85" y="120" width="30" height="30" rx="15" fill="currentColor" />
-                    <circle cx="90" cy="125" r="3" fill="hsl(var(--card))" />
-                    <circle cx="110" cy="125" r="3" fill="hsl(var(--card))" />
-                    <path d="M95,132 C95,136 105,136 105,132" fill="none" stroke="hsl(var(--card))" strokeWidth="2" />
-                    <rect x="70" y="150" width="20" height="40" fill="currentColor" />
-                    <rect x="110" y="150" width="20" height="40" fill="currentColor" />
-                  </svg>
-                </div>
-              </div>
-              
-              {/* Background glow effect */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-56 h-56 md:w-72 md:h-72 rounded-full bg-tech-blue/5 blur-xl"></div>
-              
-              {/* Orbiting tech icons */}
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/4 glass-card px-3 py-1 rounded-full animate-float">
-                <span className="text-tech-blue font-medium">Flutter</span>
-              </div>
-              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/4 glass-card px-3 py-1 rounded-full animate-float" style={{ animationDelay: '1s' }}>
-                <span className="text-tech-purple font-medium">Android</span>
-              </div>
-              <div className="absolute left-0 top-1/2 -translate-x-3/4 -translate-y-1/2 glass-card px-3 py-1 rounded-full animate-float" style={{ animationDelay: '2s' }}>
-                <span className="text-tech-pink font-medium">AR</span>
-              </div>
-              <div className="absolute right-0 top-1/2 translate-x-3/4 -translate-y-1/2 glass-card px-3 py-1 rounded-full animate-float" style={{ animationDelay: '3s' }}>
-                <span className="text-tech-blue font-medium">AI</span>
               </div>
             </div>
           </div>

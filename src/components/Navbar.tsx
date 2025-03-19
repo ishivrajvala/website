@@ -40,17 +40,17 @@ const Navbar = () => {
           
           {/* Desktop Navigation - more compact */}
           <nav className="hidden md:flex items-center">
-            <div className="flex space-x-6">
-              <button onClick={() => handleNavigation('home')} className="nav-link active">Home</button>
-              <button onClick={() => handleNavigation('about')} className="nav-link">About</button>
-              <button onClick={() => handleNavigation('projects')} className="nav-link">Projects</button>
-              <button onClick={() => handleNavigation('blogs')} className="nav-link flex items-center">
-                <BookOpen size={16} className="mr-1" />
+            <div className="flex space-x-4">
+              <button onClick={() => handleNavigation('home')} className="nav-link active text-sm">Home</button>
+              <button onClick={() => handleNavigation('about')} className="nav-link text-sm">About</button>
+              <button onClick={() => handleNavigation('projects')} className="nav-link text-sm">Projects</button>
+              <button onClick={() => handleNavigation('blogs')} className="nav-link flex items-center text-sm">
+                <BookOpen size={14} className="mr-1" />
                 Articles
               </button>
               <button 
                 onClick={() => handleNavigation('contact')} 
-                className="ml-2 px-4 py-2 bg-tech-blue rounded-lg text-white hover:bg-tech-blue/90 transition-all"
+                className="ml-2 px-4 py-2 bg-tech-gradient text-sm text-white rounded-lg hover:opacity-90 transition-all shadow-glow"
               >
                 Contact Me
               </button>
@@ -83,7 +83,7 @@ const Navbar = () => {
         </button>
         <button 
           onClick={() => handleNavigation('contact')} 
-          className="mt-4 px-6 py-2 bg-tech-blue rounded-lg text-white hover:bg-tech-blue/90 transition-all"
+          className="mt-4 px-6 py-2 bg-tech-gradient rounded-lg text-white hover:opacity-90 transition-all shadow-glow"
         >
           Contact Me
         </button>
