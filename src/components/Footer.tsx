@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Github, Mail, ArrowUp, Laptop, BookOpen } from 'lucide-react';
+import { ArrowUp } from 'lucide-react';
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -25,46 +25,6 @@ const Footer = () => {
               <span className="text-2xl font-bold font-heading bg-clip-text text-transparent bg-tech-gradient animate-gradient-shift">
                 Shivraj Vala
               </span>
-              <p className="text-foreground/60 mt-2 text-sm text-center md:text-left">
-                Building exceptional mobile experiences.
-              </p>
-            </div>
-            
-            <div className="flex space-x-6 mb-6 md:mb-0">
-              <a 
-                href="https://github.com" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="social-icon"
-                aria-label="GitHub Profile"
-              >
-                <Github size={20} />
-              </a>
-              <a 
-                href="https://stackoverflow.com" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="social-icon"
-                aria-label="Stack Overflow Profile"
-              >
-                <BookOpen size={20} />
-              </a>
-              <a 
-                href="https://medium.com" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="social-icon"
-                aria-label="Medium Profile"
-              >
-                <BookOpen size={20} />
-              </a>
-              <a 
-                href="mailto:contact@shivrajvala.com" 
-                className="social-icon"
-                aria-label="Email"
-              >
-                <Mail size={20} />
-              </a>
             </div>
           </div>
           
