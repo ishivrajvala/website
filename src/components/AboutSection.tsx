@@ -56,9 +56,9 @@ const SkillItem = ({ name, level }: SkillItemProps) => (
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-24 bg-gradient-to-b from-tech-darker to-tech-dark">
+    <section id="about" className="py-16 bg-gradient-to-b from-tech-darker to-tech-dark">
       <div className="section-container">
-        <div className="text-center mb-16 opacity-0 animate-slide-up">
+        <div className="text-center mb-12 opacity-0 animate-slide-up">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">About Me</h2>
           <div className="mx-auto w-20 h-1 bg-tech-gradient rounded-full mb-6"></div>
           <p className="max-w-2xl mx-auto text-foreground/80">
