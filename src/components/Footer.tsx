@@ -20,14 +20,6 @@ const Footer = () => {
             <ArrowUp size={20} />
           </button>
           
-          <div className="w-full flex flex-col md:flex-row justify-between items-center">
-            <div className="mb-6 md:mb-0">
-              <span className="text-2xl font-bold font-heading bg-clip-text text-transparent bg-tech-gradient animate-gradient-shift">
-                Shivraj Vala
-              </span>
-            </div>
-          </div>
-          
           <div className="w-full h-px bg-tech-gray/20 my-8"></div>
           
           <div className="w-full flex flex-col md:flex-row justify-between items-center">
