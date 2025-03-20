@@ -1,4 +1,5 @@
-import React from 'react';
+
+import React, { useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { ArrowLeft, Github, ExternalLink, Tag, Calendar } from 'lucide-react';
 import Navbar from '@/components/Navbar';
@@ -12,6 +13,11 @@ const PortfolioDetail = () => {
   
   const project = portfolioProjects.find(p => p.id === Number(id));
   const otherProjects = portfolioProjects.filter(p => p.id !== Number(id)).slice(0, 3);
+
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [id]);
 
   if (!project) {
     return (
@@ -164,7 +170,10 @@ const PortfolioDetail = () => {
                 <Card 
                   key={otherProject.id} 
                   className="bg-black/40 border-none glass-card cursor-pointer hover:border-tech-blue/30 hover:blue-glow transition-all"
-                  onClick={() => navigate(`/portfolio/${otherProject.id}`)}
+                  onClick={() => {
+                    navigate(`/portfolio/${otherProject.id}`);
+                    window.scrollTo(0, 0);
+                  }}
                 >
                   <div className="h-40 overflow-hidden">
                     <img 

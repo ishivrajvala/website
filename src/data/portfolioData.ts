@@ -4,7 +4,7 @@ export const portfolioProjects = [
     id: 1,
     title: 'AR Shopping Experience',
     description: 'A Flutter-based AR shopping application that allows users to visualize products in their own space before purchase.',
-    image: 'placeholder.svg',
+    image: 'https://images.unsplash.com/photo-1518770660439-4636190af475',
     tags: ['Flutter', 'ARKit', 'ARCore', 'Firebase'],
     links: {
       github: 'https://github.com',
@@ -42,16 +42,16 @@ export const portfolioProjects = [
       "Featured by Apple in 'Apps We Love Right Now' section"
     ],
     screenshots: [
-      "placeholder.svg",
-      "placeholder.svg",
-      "placeholder.svg"
+      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
+      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
+      "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b"
     ]
   },
   {
     id: 2,
     title: 'AI Fitness Coach',
     description: 'A mobile fitness application with real-time pose estimation and AI-powered workout recommendations.',
-    image: 'placeholder.svg',
+    image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b',
     tags: ['Android', 'TensorFlow', 'Jetpack Compose', 'ML Kit'],
     links: {
       github: 'https://github.com',
@@ -89,16 +89,16 @@ export const portfolioProjects = [
       "Over 500,000 downloads in first six months after launch"
     ],
     screenshots: [
-      "placeholder.svg",
-      "placeholder.svg",
-      "placeholder.svg"
+      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
+      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
+      "https://images.unsplash.com/photo-1649972904349-6e44c42644a7"
     ]
   },
   {
     id: 3,
     title: 'Financial Dashboard',
     description: 'A comprehensive financial management app with interactive charts, budget tracking, and investment insights.',
-    image: 'placeholder.svg',
+    image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6',
     tags: ['Flutter', 'Firebase', 'GraphQL', 'Charts'],
     links: {
       github: 'https://github.com',
@@ -136,16 +136,16 @@ export const portfolioProjects = [
       "Successfully passed independent security audit with zero critical findings"
     ],
     screenshots: [
-      "placeholder.svg",
-      "placeholder.svg",
-      "placeholder.svg"
+      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
+      "https://images.unsplash.com/photo-1649972904349-6e44c42644a7",
+      "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b"
     ]
   },
   {
     id: 4,
     title: 'Smart Home Controller',
     description: 'An IoT mobile application for controlling and monitoring smart home devices with voice commands and automations.',
-    image: 'placeholder.svg',
+    image: 'https://images.unsplash.com/photo-1649972904349-6e44c42644a7',
     tags: ['Android', 'IoT', 'MQTT', 'Voice Recognition'],
     links: {
       github: 'https://github.com',
@@ -183,16 +183,16 @@ export const portfolioProjects = [
       "Selected as the default control app by two major smart home device manufacturers"
     ],
     screenshots: [
-      "placeholder.svg",
-      "placeholder.svg",
-      "placeholder.svg"
+      "https://images.unsplash.com/photo-1649972904349-6e44c42644a7",
+      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
+      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
     ]
   },
   {
     id: 5,
     title: 'Experimental AR Navigation',
     description: 'An experimental AR navigation system that guides users through complex indoor environments.',
-    image: 'placeholder.svg',
+    image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d',
     tags: ['Flutter', 'ARCore', 'Experiments', 'Navigation'],
     links: {
       github: 'https://github.com',
@@ -230,16 +230,16 @@ export const portfolioProjects = [
       "Technology being evaluated by major transportation hubs for implementation"
     ],
     screenshots: [
-      "placeholder.svg",
-      "placeholder.svg",
-      "placeholder.svg"
+      "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
+      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
+      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
     ]
   },
   {
     id: 6,
     title: 'Voice Controlled Game',
     description: 'An experimental game that can be played entirely through voice commands.',
-    image: 'placeholder.svg',
+    image: 'https://images.unsplash.com/photo-1518770660439-4636190af475',
     tags: ['Android', 'Experiments', 'Voice AI', 'Game'],
     links: {
       github: 'https://github.com',
@@ -277,9 +277,9 @@ export const portfolioProjects = [
       "Techniques developed have been adopted by two major game studios"
     ],
     screenshots: [
-      "placeholder.svg",
-      "placeholder.svg",
-      "placeholder.svg"
+      "https://images.unsplash.com/photo-1649972904349-6e44c42644a7",
+      "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
+      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6"
     ]
   }
 ];
