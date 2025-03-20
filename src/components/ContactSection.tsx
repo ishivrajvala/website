@@ -4,7 +4,7 @@ import { Mail, Phone, MapPin, Linkedin, Github } from 'lucide-react';
 
 const ContactSection = () => {
   return (
-    <section id="contact" className="py-16 bg-gradient-to-b from-tech-darker to-black">
+    <section id="contact" className="py-12 bg-gradient-to-b from-tech-darker to-black">
       <div className="section-container">
         <div className="text-center mb-10 opacity-0 animate-slide-up">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
@@ -68,9 +68,9 @@ const ContactSection = () => {
                 </div>
               </div>
               
-              <div className="mt-8 pt-6 border-t border-tech-gray/20">
-                <h4 className="text-lg font-medium mb-4">Working Hours</h4>
-                <p className="text-foreground/70 mb-2">Monday - Friday: 9 AM - 6 PM PST</p>
+              <div className="mt-6 pt-4 border-t border-tech-gray/20">
+                <h4 className="text-lg font-medium mb-2">Working Hours</h4>
+                <p className="text-foreground/70 mb-1">Monday - Friday: 9 AM - 6 PM PST</p>
                 <p className="text-foreground/70">Weekend: Available for urgent matters</p>
               </div>
             </div>
