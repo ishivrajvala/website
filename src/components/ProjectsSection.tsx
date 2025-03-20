@@ -2,85 +2,23 @@
 import React, { useState } from 'react';
 import { ExternalLink, Github } from 'lucide-react';
 import { cn } from '@/lib/utils';
-
-const projects = [
-  {
-    id: 1,
-    title: 'AR Shopping Experience',
-    description: 'A Flutter-based AR shopping application that allows users to visualize products in their own space before purchase.',
-    image: 'placeholder.svg',
-    tags: ['Flutter', 'ARKit', 'ARCore', 'Firebase'],
-    links: {
-      github: 'https://github.com',
-      demo: 'https://example.com',
-    },
-  },
-  {
-    id: 2,
-    title: 'AI Fitness Coach',
-    description: 'A mobile fitness application with real-time pose estimation and AI-powered workout recommendations.',
-    image: 'placeholder.svg',
-    tags: ['Android', 'TensorFlow', 'Jetpack Compose', 'ML Kit'],
-    links: {
-      github: 'https://github.com',
-      demo: 'https://example.com',
-    },
-  },
-  {
-    id: 3,
-    title: 'Financial Dashboard',
-    description: 'A comprehensive financial management app with interactive charts, budget tracking, and investment insights.',
-    image: 'placeholder.svg',
-    tags: ['Flutter', 'Firebase', 'GraphQL', 'Charts'],
-    links: {
-      github: 'https://github.com',
-      demo: 'https://example.com',
-    },
-  },
-  {
-    id: 4,
-    title: 'Smart Home Controller',
-    description: 'An IoT mobile application for controlling and monitoring smart home devices with voice commands and automations.',
-    image: 'placeholder.svg',
-    tags: ['Android', 'IoT', 'MQTT', 'Voice Recognition'],
-    links: {
-      github: 'https://github.com',
-      demo: 'https://example.com',
-    },
-  },
-  {
-    id: 5,
-    title: 'Experimental AR Navigation',
-    description: 'An experimental AR navigation system that guides users through complex indoor environments.',
-    image: 'placeholder.svg',
-    tags: ['Flutter', 'ARCore', 'Experiments', 'Navigation'],
-    links: {
-      github: 'https://github.com',
-      demo: 'https://example.com',
-    },
-  },
-  {
-    id: 6,
-    title: 'Voice Controlled Game',
-    description: 'An experimental game that can be played entirely through voice commands.',
-    image: 'placeholder.svg',
-    tags: ['Android', 'Experiments', 'Voice AI', 'Game'],
-    links: {
-      github: 'https://github.com',
-      demo: 'https://example.com',
-    },
-  },
-];
+import { useNavigate } from 'react-router-dom';
+import { portfolioProjects } from '@/data/portfolioData';
 
 // Updated filter categories
 const filters = ['All', 'Flutter', 'Android', 'Experiments'];
 
 const ProjectsSection = () => {
   const [activeFilter, setActiveFilter] = useState('All');
+  const navigate = useNavigate();
   
   const filteredProjects = activeFilter === 'All' 
-    ? projects 
-    : projects.filter(project => project.tags.includes(activeFilter));
+    ? portfolioProjects 
+    : portfolioProjects.filter(project => project.tags.includes(activeFilter));
+
+  const handleProjectClick = (projectId: number) => {
+    navigate(`/portfolio/${projectId}`);
+  };
 
   return (
     <section id="projects" className="py-24 bg-gradient-to-b from-tech-dark to-tech-darker">
@@ -118,10 +56,11 @@ const ProjectsSection = () => {
             <div 
               key={project.id}
               className={cn(
-                'group glass-card rounded-xl overflow-hidden transition-all duration-500 hover:blue-glow hover:border-tech-blue/30 opacity-0',
+                'group glass-card rounded-xl overflow-hidden transition-all duration-500 hover:blue-glow hover:border-tech-blue/30 opacity-0 cursor-pointer',
                 'animate-slide-up'
               )}
               style={{ animationDelay: `${200 + index * 100}ms` }}
+              onClick={() => handleProjectClick(project.id)}
             >
               <div className="relative overflow-hidden h-48">
                 <img 
@@ -132,7 +71,7 @@ const ProjectsSection = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-tech-darker to-transparent"></div>
                 <div className="absolute bottom-0 left-0 w-full p-4 flex justify-between items-center">
                   <h3 className="text-lg font-semibold">{project.title}</h3>
-                  <div className="flex space-x-2">
+                  <div className="flex space-x-2" onClick={(e) => e.stopPropagation()}>
                     {project.links.github && (
                       <a 
                         href={project.links.github} 

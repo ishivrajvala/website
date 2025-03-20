@@ -1,6 +1,5 @@
 
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import { BookOpen, Calendar, ArrowRight, Clock } from 'lucide-react';
 
 // Sample blog data - in a real application, this would come from an API
@@ -13,7 +12,7 @@ export const blogPosts = [
     readTime: '8 min read',
     category: 'Flutter',
     imageUrl: 'https://placehold.co/600x400/0ea5e9/ffffff?text=Flutter',
-    link: '/blogs/flutter-performance'
+    mediumLink: 'https://medium.com'
   },
   {
     id: 2,
@@ -23,7 +22,7 @@ export const blogPosts = [
     readTime: '12 min read',
     category: 'AR Development',
     imageUrl: 'https://placehold.co/600x400/ec4899/ffffff?text=AR',
-    link: '/blogs/arcore-flutter'
+    mediumLink: 'https://medium.com'
   },
   {
     id: 3,
@@ -33,7 +32,7 @@ export const blogPosts = [
     readTime: '10 min read',
     category: 'Mobile Development',
     imageUrl: 'https://placehold.co/600x400/8b5cf6/ffffff?text=Compose',
-    link: '/blogs/compose-vs-flutter'
+    mediumLink: 'https://medium.com'
   },
   {
     id: 4,
@@ -43,7 +42,7 @@ export const blogPosts = [
     readTime: '14 min read',
     category: 'AI Integration',
     imageUrl: 'https://placehold.co/600x400/0ea5e9/ffffff?text=AI',
-    link: '/blogs/ai-mobile-integration'
+    mediumLink: 'https://medium.com'
   },
   {
     id: 5,
@@ -53,7 +52,7 @@ export const blogPosts = [
     readTime: '9 min read',
     category: 'Flutter',
     imageUrl: 'https://placehold.co/600x400/0ea5e9/ffffff?text=Responsive',
-    link: '/blogs/responsive-flutter-ui'
+    mediumLink: 'https://medium.com'
   },
   {
     id: 6,
@@ -63,16 +62,13 @@ export const blogPosts = [
     readTime: '11 min read',
     category: 'Architecture',
     imageUrl: 'https://placehold.co/600x400/8b5cf6/ffffff?text=State',
-    link: '/blogs/state-management-patterns'
+    mediumLink: 'https://medium.com'
   }
 ];
 
 const BlogCard = ({ blog }: { blog: typeof blogPosts[0] }) => {
-  const navigate = useNavigate();
-  
   const handleClick = () => {
-    const slug = blog.link.split('/').pop();
-    navigate(`/blogs/${slug}`);
+    window.open(blog.mediumLink, '_blank');
   };
 
   return (
@@ -104,7 +100,7 @@ const BlogCard = ({ blog }: { blog: typeof blogPosts[0] }) => {
           onClick={handleClick}
           className="inline-flex items-center text-tech-blue hover:underline mt-auto"
         >
-          Read more <ArrowRight size={16} className="ml-1" />
+          Read on Medium <ArrowRight size={16} className="ml-1" />
         </button>
       </div>
     </div>
@@ -112,8 +108,6 @@ const BlogCard = ({ blog }: { blog: typeof blogPosts[0] }) => {
 };
 
 const BlogsSection = () => {
-  const navigate = useNavigate();
-
   return (
     <section id="blogs" className="py-16 bg-gradient-to-b from-tech-dark to-tech-darker">
       <div className="section-container">
@@ -132,13 +126,15 @@ const BlogsSection = () => {
         </div>
         
         <div className="mt-10 text-center opacity-0 animate-slide-up animate-delay-300">
-          <button 
-            onClick={() => navigate('/blogs')}
+          <a 
+            href="https://medium.com" 
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn btn-outline px-6 py-3 rounded-lg inline-flex items-center"
           >
             <BookOpen size={18} className="mr-2" />
             View All Articles
-          </button>
+          </a>
         </div>
       </div>
     </section>
