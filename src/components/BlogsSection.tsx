@@ -1,9 +1,10 @@
 
 import React from 'react';
-import { BookOpen, Calendar, ArrowRight, BookText, Clock } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+import { BookOpen, Calendar, ArrowRight, Clock } from 'lucide-react';
 
 // Sample blog data - in a real application, this would come from an API
-const blogPosts = [
+export const blogPosts = [
   {
     id: 1,
     title: 'Optimizing Flutter Performance for Complex UIs',
@@ -12,7 +13,7 @@ const blogPosts = [
     readTime: '8 min read',
     category: 'Flutter',
     imageUrl: 'https://placehold.co/600x400/0ea5e9/ffffff?text=Flutter',
-    link: '/blog/flutter-performance'
+    link: '/blogs/flutter-performance'
   },
   {
     id: 2,
@@ -22,7 +23,7 @@ const blogPosts = [
     readTime: '12 min read',
     category: 'AR Development',
     imageUrl: 'https://placehold.co/600x400/ec4899/ffffff?text=AR',
-    link: '/blog/arcore-flutter'
+    link: '/blogs/arcore-flutter'
   },
   {
     id: 3,
@@ -32,7 +33,7 @@ const blogPosts = [
     readTime: '10 min read',
     category: 'Mobile Development',
     imageUrl: 'https://placehold.co/600x400/8b5cf6/ffffff?text=Compose',
-    link: '/blog/compose-vs-flutter'
+    link: '/blogs/compose-vs-flutter'
   },
   {
     id: 4,
@@ -42,11 +43,38 @@ const blogPosts = [
     readTime: '14 min read',
     category: 'AI Integration',
     imageUrl: 'https://placehold.co/600x400/0ea5e9/ffffff?text=AI',
-    link: '/blog/ai-mobile-integration'
+    link: '/blogs/ai-mobile-integration'
+  },
+  {
+    id: 5,
+    title: 'Building Responsive UIs with Flutter',
+    excerpt: 'Learn how to create adaptive and responsive user interfaces in Flutter that work seamlessly across different screen sizes and orientations.',
+    date: 'January 18, 2024',
+    readTime: '9 min read',
+    category: 'Flutter',
+    imageUrl: 'https://placehold.co/600x400/0ea5e9/ffffff?text=Responsive',
+    link: '/blogs/responsive-flutter-ui'
+  },
+  {
+    id: 6,
+    title: 'State Management Patterns in Modern Mobile Apps',
+    excerpt: 'A comparison of different state management approaches for mobile applications, with practical examples in Flutter and React Native.',
+    date: 'February 25, 2024',
+    readTime: '11 min read',
+    category: 'Architecture',
+    imageUrl: 'https://placehold.co/600x400/8b5cf6/ffffff?text=State',
+    link: '/blogs/state-management-patterns'
   }
 ];
 
 const BlogCard = ({ blog }: { blog: typeof blogPosts[0] }) => {
+  const navigate = useNavigate();
+  
+  const handleClick = () => {
+    const slug = blog.link.split('/').pop();
+    navigate(`/blogs/${slug}`);
+  };
+
   return (
     <div className="glass-card rounded-xl overflow-hidden transition-all duration-300 hover:border-tech-blue/30 hover:blue-glow group h-full flex flex-col">
       <div className="h-48 overflow-hidden">
@@ -72,18 +100,20 @@ const BlogCard = ({ blog }: { blog: typeof blogPosts[0] }) => {
         <h3 className="text-xl font-semibold mb-2 line-clamp-2">{blog.title}</h3>
         <p className="text-foreground/70 mb-4 flex-grow line-clamp-3">{blog.excerpt}</p>
         
-        <a 
-          href={blog.link} 
+        <button 
+          onClick={handleClick}
           className="inline-flex items-center text-tech-blue hover:underline mt-auto"
         >
           Read more <ArrowRight size={16} className="ml-1" />
-        </a>
+        </button>
       </div>
     </div>
   );
 };
 
 const BlogsSection = () => {
+  const navigate = useNavigate();
+
   return (
     <section id="blogs" className="py-16 bg-gradient-to-b from-tech-dark to-tech-darker">
       <div className="section-container">
@@ -96,21 +126,19 @@ const BlogsSection = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 opacity-0 animate-slide-up animate-delay-200">
-          {blogPosts.slice(0, 3).map((blog) => (
+          {blogPosts.map((blog) => (
             <BlogCard key={blog.id} blog={blog} />
           ))}
         </div>
         
         <div className="mt-10 text-center opacity-0 animate-slide-up animate-delay-300">
-          <a 
-            href="https://medium.com" 
-            target="_blank" 
-            rel="noopener noreferrer"
+          <button 
+            onClick={() => navigate('/blogs')}
             className="btn btn-outline px-6 py-3 rounded-lg inline-flex items-center"
           >
             <BookOpen size={18} className="mr-2" />
             View All Articles
-          </a>
+          </button>
         </div>
       </div>
     </section>
